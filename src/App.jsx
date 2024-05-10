@@ -1,9 +1,7 @@
 import './App.css'
 import { puppyList } from './data.js'
 import { useState } from 'react'
-
-
-
+import './index.css'
 
 function App() {
   const [puppies, setPuppies] = useState([]);
@@ -24,7 +22,9 @@ function App() {
   return (
     <div className="App">
       {puppyList.map((puppy) => (
-        <p key={puppy.id} onClick={() => handleClick(puppy.id)}>
+        <p key={puppy.id} 
+          className="card" 
+          onClick={() => handleClick(puppy.id)}>
           {puppy.name}
         </p>
       ))}
